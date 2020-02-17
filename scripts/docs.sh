@@ -12,6 +12,7 @@ for package in `ls $PACKAGES_PATH`; do
   if [ -d $path ]; then
     if [ -e "${path}/docs" ]; then
       echo "Building docs for '$package' (${path}/docs)"
+      rm -rf "${DOCS_PATH}/${package}"
       cp -R "${path}/docs" "${DOCS_PATH}/${package}"
     fi
   fi
