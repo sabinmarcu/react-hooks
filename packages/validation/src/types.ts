@@ -6,5 +6,6 @@ export type ValidatorConstructorType = (...args: any[]) => ValidatorType;
 
 export type ValidateType = (
   input: string,
-  validators: ValidatorType[],
+  validators?: ValidatorType[],
+  stopAtFail?: boolean,
 ) => string[];

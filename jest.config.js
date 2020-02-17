@@ -6,11 +6,12 @@ module.exports = {
   collectCoverageFrom: [
     'packages/**/*.[jt]s?(x)',
     '!packages/**/(typedoc|gulpfile|rollup.config).js',
-    '!**/__tests__/**/*.[jt]s?(x)',
+    '!packages/**/index.[jt]s?(x)',
+    '!**/(__tests__|dist|docs)/**/*.[jt]s?(x)',
     '!**/?(*.)+(spec|test).[jt]s?(x)',
   ],
   testMatch: [
-    '**/__tests__/**/*.[jt]s?(x)',
+    '**/(__tests__)/**/*.[jt]s?(x)',
     '**/?(*.)+(spec|test).[jt]s?(x)',
   ],
   testPathIgnorePatterns: [

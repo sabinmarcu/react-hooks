@@ -5,13 +5,15 @@ import { ValidateType, ValidatorType } from './types';
  * in order, on a given input
  * @param input The input to be validated
  * @param validators An array of validators
- * @param stopAtFail Decides between applying all validators, or stopping at first failure to prevent subsequent crashes if one validator depends on a previous one being truthy
+ * @param stopAtFail Decides between applying all validators, or stopping at first
+ * failure to prevent subsequent crashes if one validator depends on a previous one
+ * being truthy
  */
 export const validate: ValidateType = (
   input: string,
-  validators: ValidatorType[],
-  stopAtFail: boolean = false,
-): string[] => validators.reduce(
+  validators?: ValidatorType[],
+  stopAtFail?: boolean,
+): string[] => (validators || []).reduce(
   (
     prev: string[],
     validator: ValidatorType,
