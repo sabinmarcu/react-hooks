@@ -5,6 +5,7 @@ import { ValidatorType, ValidatorConstructorType } from '../types';
  * @param message string Override message templating
  * @param entity string Override entity to be used in default template
  * @param template Function Override templating function
+ * @category Validator
  */
 export type MinLengthOptionsType = {
   entity: string,

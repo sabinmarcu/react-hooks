@@ -8,6 +8,7 @@ import { ValidateType, ValidatorType } from './types';
  * @param stopAtFail Decides between applying all validators, or stopping at first
  * failure to prevent subsequent crashes if one validator depends on a previous one
  * being truthy
+ * @category Main
  */
 export const validate: ValidateType = (
   input: string,

@@ -5,6 +5,7 @@ import { ValidatorType, ValidatorConstructorType } from '../types';
  * @param string message Override message templating
  * @param string entity Override entity to be used in default template
  * @param Function template Override templating function
+ * @category Validator
  */
 export type MaxLengthOptionsType = {
   entity: string,
