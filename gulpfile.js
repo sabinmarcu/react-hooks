@@ -3,8 +3,6 @@ const babel = require('gulp-babel');
 const ts = require('gulp-typescript');
 const terser = require('gulp-terser');
 const path = require('path');
-const merge = require('merge2');
-const sourcemaps = require('gulp-sourcemaps');
 
 const babelConfig = require('./babel.config');
 const tsConfig = require('./tsconfig');

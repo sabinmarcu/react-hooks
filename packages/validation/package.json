@@ -1,8 +1,8 @@
 {
   "name": "@rgadigital/react-hooks-validation",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "repository": "https://github.com/sabinmarcu/nlg/",
-  "description": "Styled devtools logs",
+  "description": "React Hooks Validation Package",
   "main": "dist/index.js",
   "author": "Sabin Marcu <sabinmarcu@gmail.com>",
   "license": "ISC",
@@ -11,9 +11,11 @@
     "build:clean": "rimraf dist",
     "build:gulp": "gulp",
     "build:rollup": "NODE_ENV=production rollup -c ./rollup.config.js",
+    "docs": "typedoc --options ./typedoc.js",
     "prepublish": "npm run build"
   },
   "devDependencies": {
+    "typedoc": "^0.16.10",
     "jsonfn": "^0.31.0"
   }
 }

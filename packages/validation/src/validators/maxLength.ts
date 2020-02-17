@@ -2,35 +2,35 @@ import { ValidatorType, ValidatorConstructorType } from '../types';
 
 /**
  * Describes how an error message should be formatted
- * @param message string Override message templating
- * @param entity string Override entity to be used in default template
- * @param template Function Override templating function
+ * @param string message Override message templating
+ * @param string entity Override entity to be used in default template
+ * @param Function template Override templating function
  */
-export type MinLengthOptionsType = {
+export type MaxLengthOptionsType = {
   entity: string,
   message?: string,
-  template: (props: MinLengthOptionsType) => string,
+  template: (props: MaxLengthOptionsType) => string,
 };
 
 /**
  * The default configuration for formatting
  */
-export const defaultOptions: MinLengthOptionsType = {
+export const defaultOptions: MaxLengthOptionsType = {
   entity: 'Input',
-  template: ({ entity }) => `${entity} is too short`,
+  template: ({ entity }) => `${entity} is too long`,
 };
 
 /**
- * Constructor for a minimum length validator
+ * Constructor for a maximum length validator
  * @param length Value to check length against
  * @param props Configuration for error formatting
  * @category Validator
  */
-export const minLength: ValidatorConstructorType = (
+export const maxLength: ValidatorConstructorType = (
   length: number,
-  props: MinLengthOptionsType = defaultOptions,
+  props: MaxLengthOptionsType = defaultOptions,
 ): ValidatorType => (input: string) => {
-  if (input.length >= length) {
+  if (input.length < length) {
     return undefined;
   }
   const applyProps = { ...defaultOptions, ...props };
@@ -38,4 +38,4 @@ export const minLength: ValidatorConstructorType = (
   return message || template(applyProps);
 };
 
-export default minLength;
+export default maxLength;
