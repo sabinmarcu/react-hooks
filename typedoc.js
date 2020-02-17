@@ -2,7 +2,10 @@
 /* eslint-disable import/no-dynamic-require */
 const path = require('path');
 
-module.exports = (root, paths = ['src']) => {
+module.exports = (root, {
+  paths = ['src'],
+  options = null,
+}) => {
   const pkg = require(path.resolve(root, 'package.json'));
   return {
     inputFiles: paths.map((it) => path.resolve(root, it)),
@@ -14,5 +17,6 @@ module.exports = (root, paths = ['src']) => {
     mode: 'file',
     out: 'docs',
     tsconfig: path.resolve(__dirname, 'tsconfig.json'),
+    ...options,
   };
 };
