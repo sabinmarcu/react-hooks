@@ -5,7 +5,7 @@ import { ValidatorType, ValidatorConstructorType } from '../types';
  * @param string message Override message templating
  * @param string entity Override entity to be used in default template
  * @param Function template Override templating function
- * @category Validator
+ * @category MaxLength
  */
 export type MaxLengthOptionsType = {
   entity: string,
@@ -15,6 +15,7 @@ export type MaxLengthOptionsType = {
 
 /**
  * The default configuration for formatting
+ * @category MaxLength
  */
 export const defaultOptions: MaxLengthOptionsType = {
   entity: 'Input',
@@ -26,6 +27,7 @@ export const defaultOptions: MaxLengthOptionsType = {
  * @param length Value to check length against
  * @param props Configuration for error formatting
  * @category Validator
+ * @category MaxLength
  */
 export const maxLength: ValidatorConstructorType = (
   length: number,

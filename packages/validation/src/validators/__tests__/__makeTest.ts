@@ -48,6 +48,10 @@ export const makeTest = ({
             `[${args}]`,
             'and options',
             stringifyOptions(options),
+            'input',
+            `'${input}'`,
+            'expecting',
+            `'${expected}'`,
           ].join(' '), () => {
             expect(validate(input)).toEqual(expected);
           });

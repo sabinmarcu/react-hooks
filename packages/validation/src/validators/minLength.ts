@@ -5,7 +5,7 @@ import { ValidatorType, ValidatorConstructorType } from '../types';
  * @param message string Override message templating
  * @param entity string Override entity to be used in default template
  * @param template Function Override templating function
- * @category Validator
+ * @category MinLength
  */
 export type MinLengthOptionsType = {
   entity: string,
@@ -15,6 +15,7 @@ export type MinLengthOptionsType = {
 
 /**
  * The default configuration for formatting
+ * @category MinLength
  */
 export const defaultOptions: MinLengthOptionsType = {
   entity: 'Input',
@@ -26,6 +27,7 @@ export const defaultOptions: MinLengthOptionsType = {
  * @param length Value to check length against
  * @param props Configuration for error formatting
  * @category Validator
+ * @category MinLength
  */
 export const minLength: ValidatorConstructorType = (
   length: number,
