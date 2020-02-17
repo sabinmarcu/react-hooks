@@ -1,0 +1,67 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-typescript": "^7.8.3",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/config-lerna-scopes": "^8.2.0",
+    "@types/jest": "^25.1.1",
+    "@typescript-eslint/parser": "^2.19.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "docma": "^3.2.2",
+    "env-cmd": "^10.0.1",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsdoc": "^15.9.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "husky": "^3.0.7",
+    "jest": "^24.9.0",
+    "lerna": "^3.15.0",
+    "merge2": "^1.3.0",
+    "netlify-cli": "^2.15.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.22.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-typescript": "^1.0.1",
+    "ts-jest": "^25.2.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.8.0-beta"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-publish": "yarn test"
+    }
+  },
+  "scripts": {
+    "test": "jest -c ./jest.config.js --coverage",
+    "publish": "lerna run publish",
+    "build": "lerna run build"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "eslint-config-airbnb-typescript": "^6.3.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.15.1",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
+}

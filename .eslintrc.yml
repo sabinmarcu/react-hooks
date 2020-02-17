@@ -1,0 +1,10 @@
+extends:
+  - airbnb-typescript
+  # - plugin:jsdoc/recommended
+parser: '@typescript-eslint/parser'
+rules:
+  no-console: 0
+env:
+  jest: true
+# plugins:
+#   - eslint-plugin-jsdoc

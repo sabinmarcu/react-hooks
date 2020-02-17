@@ -1,0 +1,19 @@
+{
+  "name": "@rgadigital/react-hooks-validation",
+  "version": "1.0.2",
+  "repository": "https://github.com/sabinmarcu/nlg/",
+  "description": "Styled devtools logs",
+  "main": "dist/index.js",
+  "author": "Sabin Marcu <sabinmarcu@gmail.com>",
+  "license": "ISC",
+  "scripts": {
+    "build": "run-s build:*",
+    "build:clean": "rimraf dist",
+    "build:gulp": "gulp",
+    "build:rollup": "NODE_ENV=production rollup -c ./rollup.config.js",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "jsonfn": "^0.31.0"
+  }
+}
