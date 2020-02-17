@@ -55,7 +55,8 @@
   },
   "scripts": {
     "test": "jest -c ./jest.config.js --coverage",
-    "publish": "lerna run publish",
+    "docs": "lerna run docs && ./scripts/docs.sh",
+    "publish": "yarn docs && lerna run publish",
     "build": "lerna run build"
   },
   "dependencies": {
