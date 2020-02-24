@@ -64,5 +64,6 @@
     "docs": "lerna run docs && ./scripts/docs.sh",
     "publish": "yarn docs && lerna run publish",
     "build": "lerna run build"
-  }
+  },
+  "version": "0.0.0"
 }
