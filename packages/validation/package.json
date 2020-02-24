@@ -15,7 +15,11 @@
     "prepublish": "npm run build"
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^3.2.1",
     "jsonfn": "^0.31.0",
     "typedoc": "^0.16.10"
+  },
+  "dependencies": {
+    "react": "^16.12.0"
   }
 }
