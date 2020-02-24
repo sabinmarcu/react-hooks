@@ -5,7 +5,6 @@ const terser = require('gulp-terser');
 const path = require('path');
 
 const babelConfig = require('./babel.config');
-const tsConfig = require('./tsconfig');
 
 const generatePaths = (root, extras, extension = 'js') => [
   path.resolve(root, `src/**/*.${extension}`),
@@ -26,7 +25,7 @@ module.exports = (root, extras = []) => {
   gulp.task(
     'ts',
     () => gulp.src(generatePaths(root, extras, 'ts'))
-      .pipe(ts(tsConfig))
+      .pipe(ts())
       .pipe(terser())
       .pipe(gulp.dest('dist')),
   );

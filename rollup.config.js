@@ -6,9 +6,9 @@ import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 
 const production = process.env.NODE_ENV === 'production';
-const pathToEsmPath = (input) => {
+const addExtension = (input, ext) => {
   const extension = input.substr(input.lastIndexOf('.'));
-  return input.replace(new RegExp(`${extension}$`), `.esm${extension}`);
+  return input.replace(new RegExp(`${extension}$`), `${ext}${extension.replace('ts', 'js')}`);
 };
 
 export default (root, ...inputs) => (inputs && inputs.length > 0 ? inputs : ['index.js'])
@@ -16,12 +16,12 @@ export default (root, ...inputs) => (inputs && inputs.length > 0 ? inputs : ['in
     input: path.resolve(root, 'src', input),
     output: [
       {
-        file: path.resolve(root, 'dist', input),
+        file: path.resolve(root, 'dist', addExtension(input, '.min')),
         format: 'cjs',
         sourcemap: true,
       },
       {
-        file: path.resolve(root, 'dist', pathToEsmPath(input)),
+        file: path.resolve(root, 'dist', addExtension(input, '.min.esm')),
         format: 'esm',
         sourcemap: true,
       },
@@ -39,11 +39,11 @@ export default (root, ...inputs) => (inputs && inputs.length > 0 ? inputs : ['in
             babel({
               exclude: 'node_modules/**',
             }),
+            commonjs({ extensions: ['.js', '.ts'] }),
           ],
       )
       .concat([
         resolve(),
-        commonjs({ extensions: ['.js', '.ts'] }),
         production && terser(),
       ]),
   }));
