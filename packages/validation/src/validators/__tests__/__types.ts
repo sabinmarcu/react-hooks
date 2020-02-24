@@ -34,4 +34,4 @@ export type ValidatorOverloadType = ValidatorOptionsType | ConstructorValidatorO
 
 
 export type MakeTestOptionsType = ValidatorOverloadType
-& { defaultOptions: Object, defaultArgs?: any[], };
+& { defaultOptions?: Object, defaultArgs?: any[], };

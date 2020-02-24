@@ -1,6 +1,7 @@
 import { MakeTestOptionsType } from './__types';
-import { ValidatorConstructorType } from '../../types';
+import { ValidatorType, ValidatorConstructorType } from '../../types';
 import { stringifyOptions } from './__utils';
+import { validate as validateFunction } from '../../validate';
 
 export const makeTest = ({
   validator,
@@ -12,9 +13,9 @@ export const makeTest = ({
     variants,
   },
 }: MakeTestOptionsType) => {
-  const getValidator = (...args: any[]) => (factory
+  const getValidator = (...args: any[]): ValidatorType => (factory
     ? (validator as ValidatorConstructorType)(...args)
-    : validator
+    : (validator as ValidatorType)
   );
   describe((validator as any).name, () => {
     it('should construct properly', () => {
@@ -33,10 +34,10 @@ export const makeTest = ({
         const validate = getValidator(...(defaultArgs || []), defaultOptions);
         const { valid, invalid } = basic;
         it('should validate properly', () => {
-          expect(validate(valid, defaultOptions)).toBe(undefined);
+          expect(validateFunction(valid, [validate])).toEqual([]);
         });
         it('should invalidate properly', () => {
-          expect(validate(invalid.input, defaultOptions)).toBe(invalid.expected);
+          expect(validateFunction(invalid.input, [validate])).toEqual([invalid.expected]);
         });
       });
     }
@@ -57,7 +58,7 @@ export const makeTest = ({
             'expecting',
             `'${expected}'`,
           ].join(' '), () => {
-            expect(validate(input, options)).toEqual(expected);
+            expect(validateFunction(input, [validate])).toEqual(expected);
           });
         });
       });

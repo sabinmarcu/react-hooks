@@ -72,6 +72,7 @@ const makeRegex = (matcher: string, match: RegexMatch) => {
  *
  * @param matcher
  * @param options
+ * @category Validator
  * @category Matches
  */
 export const matches: ValidatorConstructorType = (

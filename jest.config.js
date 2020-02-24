@@ -16,6 +16,6 @@ module.exports = {
   ],
   testPathIgnorePatterns: [
     '/node_modules/',
-    '\\/__[^.\\/]*\\.[jt]sx?$',
+    '\\/__[^\\/]*\\.[jt]sx?$',
   ],
 };
