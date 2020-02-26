@@ -87,6 +87,7 @@
 							<h3>Other Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias"><a href="globals.html#validatetype" class="tsd-kind-icon">Validate<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#validatorcombinedtype" class="tsd-kind-icon">Validator<wbr>Combined<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#validatorconstructortype" class="tsd-kind-icon">Validator<wbr>Constructor<wbr>Type</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#validatortype" class="tsd-kind-icon">Validator<wbr>Type</a></li>
 							</ul>
@@ -100,6 +101,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#makeregex" class="tsd-kind-icon">make<wbr>Regex</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#regexmatchincludes" class="tsd-kind-icon">regex<wbr>Match<wbr>Includes</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#usefield" class="tsd-kind-icon">use<wbr>Field</a></li>
 							</ul>
 							<h3>Validator Functions</h3>
 							<ul class="tsd-index-list">
@@ -126,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">Matches<wbr>Option<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>match<span class="tsd-signature-symbol">?: </span><a href="globals.html#regexmatch" class="tsd-signature-type">RegexMatch</a><span class="tsd-signature-symbol">; </span>message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>negate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>template<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>matcher<span class="tsd-signature-symbol">: </span><a href="globals.html#matchesparamtype" class="tsd-signature-type">MatchesParamType</a>, matches<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">RegExpMatchArray</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L30">validators/matches.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L30">packages/validation/src/validators/matches.ts:30</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -176,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">Matches<wbr>Param<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L6">validators/matches.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L6">packages/validation/src/validators/matches.ts:6</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -188,7 +190,7 @@
 					<div class="tsd-signature tsd-kind-icon">Regex<wbr>Match<span class="tsd-signature-symbol">:</span> <a href="globals.html#regexmatchtype" class="tsd-signature-type">RegexMatchType</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#regexmatchmethod" class="tsd-signature-type">RegexMatchMethod</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><a href="globals.html#regexmatchtype" class="tsd-signature-type">RegexMatchType</a><span class="tsd-signature-symbol">, </span><a href="globals.html#regexmatchmethod" class="tsd-signature-type">RegexMatchMethod</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><a href="globals.html#regexmatchmethod" class="tsd-signature-type">RegexMatchMethod</a><span class="tsd-signature-symbol">, </span><a href="globals.html#regexmatchtype" class="tsd-signature-type">RegexMatchType</a><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L21">validators/matches.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L21">packages/validation/src/validators/matches.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -200,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">Regex<wbr>Match<wbr>Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"char"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"word"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L16">validators/matches.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L16">packages/validation/src/validators/matches.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -212,7 +214,7 @@
 					<div class="tsd-signature tsd-kind-icon">Regex<wbr>Match<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"any"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"all"</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L11">validators/matches.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L11">packages/validation/src/validators/matches.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -227,7 +229,7 @@
 					<div class="tsd-signature tsd-kind-icon">Max<wbr>Length<wbr>Options<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>template<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><a href="globals.html#maxlengthoptionstype" class="tsd-signature-type">MaxLengthOptionsType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/maxLength.ts#L10">validators/maxLength.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/maxLength.ts#L10">packages/validation/src/validators/maxLength.ts:10</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -288,7 +290,7 @@
 					<div class="tsd-signature tsd-kind-icon">Min<wbr>Length<wbr>Options<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>template<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><a href="globals.html#minlengthoptionstype" class="tsd-signature-type">MinLengthOptionsType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/minLength.ts#L10">validators/minLength.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/minLength.ts#L10">packages/validation/src/validators/minLength.ts:10</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -349,7 +351,7 @@
 					<div class="tsd-signature tsd-kind-icon">Validate<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, validators<span class="tsd-signature-symbol">?: </span><a href="globals.html#validatortype" class="tsd-signature-type">ValidatorType</a><span class="tsd-signature-symbol">[]</span>, stopAtFail<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/types.ts#L7">types.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/types.ts#L9">packages/validation/src/types.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -381,12 +383,22 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="validatorcombinedtype" class="tsd-anchor"></a>
+					<h3>Validator<wbr>Combined<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Validator<wbr>Combined<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="globals.html#validatortype" class="tsd-signature-type">ValidatorType</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#validatorconstructortype" class="tsd-signature-type">ValidatorConstructorType</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/types.ts#L7">packages/validation/src/types.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="validatorconstructortype" class="tsd-anchor"></a>
 					<h3>Validator<wbr>Constructor<wbr>Type</h3>
 					<div class="tsd-signature tsd-kind-icon">Validator<wbr>Constructor<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="globals.html#validatortype" class="tsd-signature-type">ValidatorType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/types.ts#L5">types.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/types.ts#L5">packages/validation/src/types.ts:5</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -417,7 +429,7 @@
 					<div class="tsd-signature tsd-kind-icon">Validator<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/types.ts#L1">types.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/types.ts#L1">packages/validation/src/types.ts:1</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -458,7 +470,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validate.ts#L13">validate.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validate.ts#L13">packages/validation/src/validate.ts:13</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -513,7 +525,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L54">validators/matches.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L54">packages/validation/src/validators/matches.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -539,7 +551,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L46">validators/matches.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L46">packages/validation/src/validators/matches.ts:46</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -552,6 +564,75 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="usefield" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> use<wbr>Field</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">use<wbr>Field<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>defaultValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>validators<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>errors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>isDirty<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>isValid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>setValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/useField.ts#L7">packages/validation/src/useField.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> __namedParameters: <span class="tsd-signature-symbol">{ </span>defaultValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>validators<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = {}</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>default<wbr>Value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>validators<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>errors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>isDirty<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>isValid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol">; </span>setValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>errors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>is<wbr>Dirty<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>is<wbr>Valid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>on<wbr>Change<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>set<wbr>Value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>value: <span class="tsd-signature-type">A</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="tsd-parameter">
+									<h5>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
@@ -568,7 +649,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/isEmail.ts#L28">validators/isEmail.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/isEmail.ts#L28">packages/validation/src/validators/isEmail.ts:28</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -594,7 +675,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L78">validators/matches.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L78">packages/validation/src/validators/matches.ts:78</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -620,7 +701,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/maxLength.ts#L32">validators/maxLength.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/maxLength.ts#L32">packages/validation/src/validators/maxLength.ts:32</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -661,7 +742,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/minLength.ts#L32">validators/minLength.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/minLength.ts#L32">packages/validation/src/validators/minLength.ts:32</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -701,10 +782,10 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/maxLength.ts#L20">validators/maxLength.ts:20</a></li>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/minLength.ts#L20">validators/minLength.ts:20</a></li>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L40">validators/matches.ts:40</a></li>
-							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/isEmail.ts#L14">validators/isEmail.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/maxLength.ts#L20">packages/validation/src/validators/maxLength.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/minLength.ts#L20">packages/validation/src/validators/minLength.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L40">packages/validation/src/validators/matches.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/isEmail.ts#L14">packages/validation/src/validators/isEmail.ts:14</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -730,8 +811,8 @@
 						<div class="tsd-signature tsd-kind-icon">entity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Input&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/maxLength.ts#L21">validators/maxLength.ts:21</a></li>
-								<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/minLength.ts#L21">validators/minLength.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/maxLength.ts#L21">packages/validation/src/validators/maxLength.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/minLength.ts#L21">packages/validation/src/validators/minLength.ts:21</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -741,7 +822,7 @@
 						<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Input is not a valid email&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/isEmail.ts#L16">validators/isEmail.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/isEmail.ts#L16">packages/validation/src/validators/isEmail.ts:16</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -757,7 +838,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/maxLength.ts#L22">validators/maxLength.ts:22</a></li>
+										<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/maxLength.ts#L22">packages/validation/src/validators/maxLength.ts:22</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -776,7 +857,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/minLength.ts#L22">validators/minLength.ts:22</a></li>
+										<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/minLength.ts#L22">packages/validation/src/validators/minLength.ts:22</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -795,7 +876,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/caea6f6/packages/validation/src/validators/matches.ts#L41">validators/matches.ts:41</a></li>
+										<li>Defined in <a href="https://github.com/sabinmarcu/react-hooks/blob/8c27045/packages/validation/src/validators/matches.ts#L41">packages/validation/src/validators/matches.ts:41</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>

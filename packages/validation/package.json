@@ -4,6 +4,7 @@
   "repository": "https://github.com/sabinmarcu/nlg/",
   "description": "React Hooks Validation Package",
   "main": "dist/index.js",
+  "module": "dist/index.ts",
   "author": "Sabin Marcu <sabinmarcu@gmail.com>",
   "license": "ISC",
   "scripts": {

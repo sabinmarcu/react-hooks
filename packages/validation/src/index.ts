@@ -6,3 +6,4 @@ import * as validatorsImport from './validators';
 export const validators = validatorsImport;
 
 export { validate } from './validate';
+export { useField } from './useField';
