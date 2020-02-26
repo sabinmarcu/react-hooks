@@ -8,9 +8,9 @@ const babelConfig = require('./babel.config');
 
 const generatePaths = (root, extras, extension = 'js') => [
   path.resolve(root, `src/**/*.${extension}`),
-  `!${path.resolve(root, `src/**/*.{spec,test,fixture}.${extension}`)}`,
-  `!${path.resolve(root, 'src/**/__{tests,fixtures}__')}`,
-  `!${path.resolve(root, `src/**/__{tests,fixtures}__/*.${extension}`)}`,
+  `!${path.resolve(root, `src/**/*.{spec,test,fixture,mock}.${extension}`)}`,
+  `!${path.resolve(root, 'src/**/__{tests,fixtures,mocks}__')}`,
+  `!${path.resolve(root, `src/**/__{tests,fixtures,mocks}__/*.${extension}`)}`,
   ...extras.map((it) => it.replace(/^(!?)(.*)$/, (match, $1, $2) => `${$1}${path.resolve(root, $2)}`)),
 ];
 

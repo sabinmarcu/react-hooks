@@ -10,8 +10,8 @@ module.exports = (root, {
   return {
     inputFiles: paths.map((it) => path.resolve(root, it)),
     exclude: [
-      '**/+(__tests__|docs|dist)/*',
-      '**/*.+(spec|test).[jt]s?(x)',
+      '**/+(__tests__|__fixtures__|__mocks__|docs|dist)/*',
+      '**/*.+(spec|test|mock).[jt]s?(x)',
     ],
     name: `${pkg.name} Documentation`,
     mode: 'file',
