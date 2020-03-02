@@ -30,19 +30,45 @@ export enum ProgressStates {
 }
 
 const getGlobal = () => (window || global || {});
+export type FakeProgressTypeDefault = {
+  progress: number,
+  start: () => void,
+  stop: () => void,
+  pause: () => void,
+  resume: () => void,
+};
+export type FakeProgressTypeDebug = FakeProgressTypeDefault & {
+  state: ProgressStates,
+  duration: number,
+  precision: number,
+  autoStart: boolean,
+  tick: Function,
+  clearTick: Function,
+  interval: number,
+  progressPerTick: number,
+};
+
+export const defaultValues = {
+  precision: 20,
+  autoStart: false,
+  tick: getGlobal().setTimeout,
+  clearTick: getGlobal().clearInterval,
+};
 
 export const useFakeProgress = (
   duration: number,
-  precision: number = 20,
-  autoStart: boolean = false,
   {
-    tick = getGlobal().setTimeout,
-    clearTick = getGlobal().clearInterval,
+    precision = defaultValues.precision,
+    autoStart = defaultValues.autoStart,
+    tick = defaultValues.tick,
+    clearTick = defaultValues.clearTick,
   }: {
-    tick: Function,
-    clearTick: Function,
-  },
-) => {
+    precision?: number,
+    autoStart?: boolean,
+    tick?: Function,
+    clearTick?: Function,
+  } = {},
+): FakeProgressTypeDefault => {
   const [progress, setProgress] = useState(0);
   const {
     interval,
@@ -91,16 +117,16 @@ export const useFakeProgress = (
 
   useEffect(
     () => {
-      if (state !== ProgressStates.ACTIVE) {
+      if (state !== ProgressStates.ACTIVE || progress === 100) {
         return undefined;
       }
       const handler = () => {
-        setProgress((p: number): number => p + progressPerTick);
+        setProgress(Math.min(progress + progressPerTick, 100));
       };
       const int = tick(interval, handler);
       return () => clearTick(int);
     },
-    [tick, clearTick, interval, setProgress, state],
+    [tick, clearTick, interval, progress, setProgress, state],
   );
 
   return {
@@ -119,6 +145,7 @@ export const useFakeProgress = (
           progressPerTick,
           tick,
           clearTick,
+          autoStart,
         }
         : {}
     ),
