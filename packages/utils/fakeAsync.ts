@@ -7,9 +7,7 @@ export const setInterval = (
   let elapsed = 0;
   const tick = () => {
     elapsed += interval || 0;
-    if (handler) {
-      handler(...args);
-    }
+    handler?.(...args);
   };
   const clear = () => {
     elapsed = 0;
@@ -38,9 +36,7 @@ export const setTimeout = (
   const tick = () => {
     if (elapsed !== timeout) {
       elapsed = timeout || 0;
-      if (handler) {
-        handler(...args);
-      }
+      handler?.(...args);
     } else {
       throw new Error('Already Called!');
     }
