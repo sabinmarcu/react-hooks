@@ -18,6 +18,12 @@ describe('setTimeout', () => {
     expect(typeof timeout.tick).toBe('function');
     expect(typeof timeout.clear).toBe('function');
   });
+  it('Should progress properly (default args)', () => {
+    const timeout = setTimeout();
+    expect(timeout.elapsed).toBe(0);
+    timeout.tick();
+    expect(timeout.elapsed).toBe(0);
+  });
   it('Should progress properly', () => {
     const fn = jest.fn();
     const timeout = setTimeout(100, fn);
@@ -56,6 +62,9 @@ describe('setTimeout', () => {
     expect(timeout.elapsed).toBe(100);
     expect(fn.mock.calls.length).toBe(2);
   });
+  it('Should error properly on invalid clear', () => {
+    expect(() => clearTimeout()).toThrowError();
+  });
 });
 
 describe('setInterval', () => {
@@ -70,6 +79,12 @@ describe('setInterval', () => {
     expect(interval.elapsed).toBe(0);
     expect(typeof interval.tick).toBe('function');
     expect(typeof interval.clear).toBe('function');
+  });
+  it('Should progress properly (default args)', () => {
+    const interval = setInterval();
+    expect(interval.elapsed).toBe(0);
+    interval.tick();
+    expect(interval.elapsed).toBe(0);
   });
   it('Should progress properly', () => {
     const fn = jest.fn();
@@ -115,5 +130,8 @@ describe('setInterval', () => {
     interval.tick();
     expect(interval.elapsed).toBe(100);
     expect(fn.mock.calls.length).toBe(2);
+  });
+  it('Should error properly on invalid clear', () => {
+    expect(() => clearInterval()).toThrowError();
   });
 });

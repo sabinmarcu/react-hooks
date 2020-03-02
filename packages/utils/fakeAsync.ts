@@ -21,9 +21,11 @@ export const setInterval = (
   };
 };
 
-export const clearInterval = (interval: ReturnType<typeof setInterval>) => {
+export const clearInterval = (interval?: ReturnType<typeof setInterval>) => {
   if (interval && interval.clear) {
     interval.clear();
+  } else {
+    throw new Error('Cannot clear something that\'s not a fakeInterval');
   }
 };
 
@@ -53,8 +55,10 @@ export const setTimeout = (
   };
 };
 
-export const clearTimeout = (timeout: ReturnType<typeof setTimeout>) => {
+export const clearTimeout = (timeout?: ReturnType<typeof setTimeout>) => {
   if (timeout && timeout.clear) {
     timeout.clear();
+  } else {
+    throw new Error('Cannot clear something that\'s not a fakeTimeout');
   }
 };
